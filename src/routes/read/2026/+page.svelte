@@ -171,7 +171,7 @@
         <p>Scroll Down to Read <span style:transform="translateY(5px)" class="material-symbols-outlined">arrow_circle_down</span></p>
     </div>
     {:else}
-    <div style="top: {290-(scrollY/10)}px; justify-self: center; position: fixed;">
+    <div style="top: {290-(scrollY/10)}px; position: fixed; transform: translate(-50%, 0%); left: 50%;">
         <h1>Briars and Ivy</h1>
         <p style:font-weight=700 style:font-size=20px>VOL. LXIV</p>
         <p>Scroll Down to Read <span style:transform="translateY(5px)" class="material-symbols-outlined">arrow_circle_down</span></p>
@@ -194,7 +194,7 @@
     <img src="{base}/images/2026/waveLanding.png" class="wave" alt="Decorational graphic" />
     <div id="body">
         {#if screenX < 1000}
-            <div id="studentStaff" style="background-color: rgba(200, 160, 80, 0.85); width: 90%; justify-self: center; padding: 20px; border-radius: 50px; text-shadow: 0px 0px 10px black; font-weight: 600">
+            <div id="studentStaff" style="background-color: rgba(200, 160, 80, 0.85); width: 90%; justify-self: center; padding: 20px; border-radius: 50px; text-shadow: 0px 0px 10px black; font-weight: 600; margin-bottom: 50px;">
                 <h2>Student Staff</h2>
                 <p>Editor-in-Chiefs: Ava Wu, Madeline Chu</p>
                 <p>Art Director: Kristie Shao</p>
@@ -229,7 +229,7 @@
                 fundamentally nurture the impacts you create.
                 <br><br>
                 <span style:font-size=45px style:font-family="Indie Flower">Ava Wu, Madeline Chu</span><br>
-                Editor-in-Chiefs<br>
+                <span style:font-family="Epilogue"><i>Editor-in-Chiefs</i></span><br>
                 ____
             </p>
             <div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;border-radius:40px;" src="https://online.fliphtml5.com/l879/BriarsAndIvy2026-Full/" title="BriarsAndIvy2026-Full" seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>

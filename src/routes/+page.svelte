@@ -190,7 +190,7 @@
         <p><button onclick={() => {window.location.href = base + "/read/2026"}}>Read Volume</button></p>
     </div>
     {:else}
-    <div style="top: {290-(scrollY/10)}px; justify-self: center; position: fixed;">
+    <div style="top: {290-(scrollY/10)}px; position: fixed; transform: translate(-50%, 0%); left: 50%;">
         <h1>Briars and Ivy</h1>
         <p style:font-weight=700 style:font-size=20px>VOL. LXIV</p>
         <p><button onclick={() => {window.location.href = base + "/read/2026"}}>Read Volume</button></p>

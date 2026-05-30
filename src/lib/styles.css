@@ -29,6 +29,12 @@ button {
     text-align: center;
     transition: all 0.1s ease-in-out;
 }
+
+p {
+    button {
+        font-size: 14px;
+    }
+}
 button:hover {
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.595);
     cursor: pointer;

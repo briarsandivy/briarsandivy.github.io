@@ -1,5 +1,11 @@
-export const recentYear = 2024; // Update this with the most recent year that awards are updated for
+export const recentYear = 2025; // Update this with the most recent year that awards are updated for
 export const awards = [ // Update this with the actual awards; most recent year is index 0
+    [
+        "National Council of Teachers of English (PRESLM)- 1st Class",
+        "Columbia Scholastic Press Association (CSPA) – Gold with All-Columbian Honors awarded for Verbal and Visual Sections",
+        "Empire State School Press Association (ESSPA) – Best Overall Literary Arts Magazine – Gold",
+        "National Scholastic Press Association (NSPA) - Design of the Year—Literary/Specialty Magazine Page/Spread- Honorable Mention"
+    ],
     [
         "American Scholastic Press Association (ASPA)-- 1st Place",
         "National Scholastic Press Association (NSPA)— All-American w/ Four Marks of Distinction",
@@ -70,7 +76,7 @@ export const awardCategories = {
 
     // Keyword matching for Medal/Rank Levels
     levels: [
-        ["Best Overall", "Highest Award", "First Class", "Gold", "Superior", "1st Place", "First Place", "1st Class", "All-American"],
+        ["Best", "Highest Award", "First Class", "Gold", "Superior", "1st Place", "First Place", "1st Class", "Distinction", "Design of the Year"],
         ["Silver", "Second Class", "2nd Class", "2nd Place", "Second Place"],
         ["Bronze", "Mark of Distinction", "Honorable Mention", "Third Class", "3rd Class", "3rd Place", "Third Place", " "] // Don't remove that space; it holds a purpose.
     ]
