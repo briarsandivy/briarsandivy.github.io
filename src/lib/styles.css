@@ -1,0 +1,39 @@
+
+
+h1 {
+    font-family: Montserrat;
+    font-weight: 800;
+    text-align: center;
+}
+h2, h3 {
+    font-family: Poppins;
+    text-align: center;
+}
+h4, h5, h6, p {
+    font-family: Montserrat;
+    text-align: center;
+}
+
+.wave {
+    width: 100%;
+    margin: none;
+    margin-bottom: -10px;
+}
+
+button {
+    padding: 10px;
+    border-radius: 50px;
+    font-family: Epilogue;
+    border: none;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.416);
+    text-align: center;
+    transition: all 0.1s ease-in-out;
+}
+button:hover {
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.595);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+button:active {
+    transform: scale(1.2);
+}
