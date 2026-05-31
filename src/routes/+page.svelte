@@ -17,18 +17,19 @@
     })
 
     let i = $state(0);
-    let currAwards = $state([]);
-    currAwards = updateAwards(i);
+    let currAwards = $derived(updateAwards(i));
 </script>
+<svelte:head>
+    <link rel="preload" as="image" href="{base}/images/2026/cover.png" />
+</svelte:head>
 <style>
     #cover {
         width: 1500px;
         position: fixed;
-        top: 0;
         right: 0;
         user-select: none;
         -webkit-user-drag: none;
-        z-index: 0;
+        z-index: 1;
     }
     @media (min-width: 1500px) {
         #cover {
@@ -174,9 +175,9 @@
 </style>
 <svelte:window bind:innerWidth={screenX} bind:scrollY={scrollY}></svelte:window>
 
-<img id="cover" src="{base}/images/2026/cover.png" alt="Figure standing in a field of sunflowers" />
+<img id="cover" style="top: {-scrollY/20}px;" src="{base}/images/2026/cover.png" alt="Figure standing in a field of sunflowers" />
 <div id="coverText">
-    <p style="top: {10-(scrollY/50)}px; left: 15px; position: fixed; font-family: Epilogue, Montserrat"><i>Sunflowers - </i> <span style:font-weight=600>Alexandra Orr</span></p>
+    <p style="top: {10-(scrollY/20)}px; left: 15px; position: fixed; font-family: Epilogue, Montserrat"><i>Sunflowers - </i> <span style:font-weight=600>Alexandra Orr</span></p>
     {#if screenX >= 1500}
     <div style="top: {300-(scrollY/10)}px; right:200px; position: fixed;">
         <h1>Briars and Ivy</h1>
@@ -218,11 +219,11 @@
             <div id="awards">
                 <h2>Awards</h2>
                 <h3>
-                    <button class:goAway={(awards.length-1)==i} onclick={() => {i++; currAwards = updateAwards(i)}}>
+                    <button class:goAway={(awards.length-1)==i} onclick={() => {i++;}}>
                         <span class="material-symbols-outlined" translate="no">arrow_circle_left</span>
                     </button> 
                     <span style="user-select: none">{recentYear - i}</span> 
-                    <button class:goAway={i <= 0} onclick={() => {i--; currAwards = updateAwards(i)}}>
+                    <button class:goAway={i <= 0} onclick={() => {i--;}}>
                         <span class="material-symbols-outlined" translate="no">arrow_circle_right</span>
                     </button>
                 </h3>

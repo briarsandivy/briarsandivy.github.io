@@ -61,6 +61,9 @@
         ["Alissa Zhu", "A senior who enjoys painting and hanging out with her birds."]
     ]);
 </script>
+<svelte:head>
+    <link rel="preload" as="image" href="{base}/images/2026/cover.png" />
+</svelte:head>
 <style>
     #cover {
         width: 1500px;
@@ -155,9 +158,9 @@
 </style>
 <svelte:window bind:innerWidth={screenX} bind:scrollY={scrollY}></svelte:window>
 
-<img id="cover" src="{base}/images/2026/cover.png" alt="Figure standing in a field of sunflowers" />
+<img id="cover" style="top: {-scrollY/20}px;" src="{base}/images/2026/cover.png" alt="Figure standing in a field of sunflowers" />
 <div id="coverText">
-    <p style="top: {10-(scrollY/50)}px; left: 15px; position: fixed; font-family: Epilogue, Montserrat"><i>Sunflowers - </i> <span style:font-weight=600>Alexandra Orr</span></p>
+    <p style="top: {10-(scrollY/20)}px; left: 15px; position: fixed; font-family: Epilogue, Montserrat"><i>Sunflowers - </i> <span style:font-weight=600>Alexandra Orr</span></p>
     {#if screenX >= 1500}
     <div style="top: {300-(scrollY/10)}px; right:200px; position: fixed;">
         <h1>Briars and Ivy</h1>
