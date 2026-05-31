@@ -93,6 +93,7 @@
             margin-top: 10px;
             background-color:  rgb(149, 149, 20);
             color: white;
+            border: none;
         }
         button:active {
             background-color:  white;

@@ -29,7 +29,8 @@ button {
     text-align: center;
     transition: all 0.1s ease-in-out;
     color: white;
-    background-color: rgb(88, 87, 87);
+    background-color: rgba(150, 150, 150, 0.879);
+    border: 5px rgb(205, 201, 201) solid;
 }
 
 p {
