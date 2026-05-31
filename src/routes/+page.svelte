@@ -45,6 +45,12 @@
             margin-bottom: 0px;
             margin-top: 0px;
         }
+        button {
+            color: white;
+            text-shadow: 0px 0px 5px black;
+            background-color: rgba(184, 184, 184, 0.637);
+            border: rgb(240, 239, 239) 5px solid;
+        }
     }
     #content {
         z-index: 999;

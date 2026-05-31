@@ -28,6 +28,8 @@ button {
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.416);
     text-align: center;
     transition: all 0.1s ease-in-out;
+    color: white;
+    background-color: rgb(88, 87, 87);
 }
 
 p {
