@@ -46,3 +46,14 @@ button:hover {
 button:active {
     transform: scale(1.2);
 }
+
+button#return {
+    position: fixed;
+    top: 20px;
+    right: 25px;
+    z-index: 1000;
+    span {
+        font-size: 30px;
+        transform: translateY(1px)
+    }
+}

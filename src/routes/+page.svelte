@@ -3,7 +3,7 @@
     import { onMount } from "svelte";
     import { fade } from "svelte/transition";
 
-    import { recentYear, awards, awardCategories, updateAwards } from "$lib/awards";
+    import { recentYear, awards, awardCategories, updateAwards, catalog } from "$lib/awards";
 
     let screenX = $state(1450);
     let scrollY = $state(0);
@@ -73,8 +73,8 @@
 
     #aboutVolume {
         top: 900px;
-        transition: all ease 2s;
-        border: none;
+        transition: top ease 2s, border 4s;
+        border: rgb(96, 86, 30) solid 0px;
         box-shadow: 0px 5px 20px 10px rgba(0, 0, 0, 0.205);
     }
     #aboutVolume.active {
@@ -113,13 +113,16 @@
     #awards {
         margin-top: 40px;
         margin-bottom: 40px;
-        display: grid;
-        /* Create two columns: one for the image (auto-sized) and one for text */
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 1.5rem;
-        align-items: center; /* Vertically centers text with the image */
-        max-width: 90%;
-        margin: 0 auto;
+
+        #gridAwards {
+            margin: 0 auto;
+            display: grid;
+            /* Create two columns: one for the image (auto-sized) and one for text */
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+            align-items: center; /* Vertically centers text with the image */
+            max-width: 90%;
+        }
 
         button {
             padding: 5px;
@@ -234,13 +237,18 @@
                         <span class="material-symbols-outlined" translate="no">arrow_circle_right</span>
                     </button>
                 </h3>
+                {#if catalog.indexOf(recentYear-i) != -1}
+                <h4 transition:fade><button style:padding=10px onclick={() => {window.location.href = base + "/read/" + (recentYear-i)}}>Read Volume</button></h4>
+                {/if}
                 
-                {#each currAwards as x}
-                    <div class="award-card">
-                        <img src="{base}/images/global/awards/{x[1]}.png" alt="Medal graphic" />
-                        <p>{x[0]}</p>
-                    </div>
-                {/each}
+                <div id="gridAwards">
+                    {#each currAwards as x}
+                        <div class="award-card">
+                            <img src="{base}/images/global/awards/{x[1]}.png" alt="Medal graphic" />
+                            <p>{x[0]}</p>
+                        </div>
+                    {/each}
+                </div>
             </div>
         </div>
     </div>

@@ -124,7 +124,7 @@
 
         div {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
             div {
                 padding: 10px;
@@ -144,17 +144,7 @@
         }
     }
 
-    #return {
-        position: fixed;
-        top: 20px;
-        right: 25px;
-        z-index: 1000;
-        span {
-            font-size: 30px;
-            transform: translateY(1px)
-        }
-    }
-
+    
 </style>
 <svelte:window bind:innerWidth={screenX} bind:scrollY={scrollY}></svelte:window>
 
@@ -255,5 +245,4 @@
         <p style:font-family="Epilogue"><i>Introflection -</i> <span style:font-weight=600>Jordan Melnick</span></p>-->
     </div>
 </div>
-
 <button id="return" onclick={() => {window.location = base + "/"}}><span class="material-symbols-outlined">arrow_circle_left</span></button>

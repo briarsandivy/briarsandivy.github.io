@@ -82,6 +82,13 @@ export const awardCategories = {
     ]
 };
 
+// If you have a page for a volume of Briars and Ivy, you can add it to the list here
+// Add the year, not the Roman numeral of the volume
+export let catalog = [
+    2026,
+    2025
+]
+
 export function updateAwards(i) {
         let returnAwards = [];
         for (let k = 0; k < awards[i].length; k++) {
