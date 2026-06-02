@@ -1,1 +1,0 @@
-import{G as e,W as t,n,q as r,x as i,y as a}from"../chunks/o1YsVTq8.js";import{s as o}from"../chunks/BPyCVECS.js";import"../chunks/xihTtKlq.js";var s=i(`<h1>You shouldn't be here</h1> <h2>We'll take you back to the homepage. Just hang tight!</h2>`,1);function c(i,c){e(c,!0),n(()=>{setTimeout(()=>{window.location.href=o+`/`},1e3)});var l=s();r(2),a(i,l),t()}export{c as component};

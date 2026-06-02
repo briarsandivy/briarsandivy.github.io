@@ -1,5 +1,8 @@
 export const recentYear = 2025; // Update this with the most recent year that awards are updated for
-export const awards = [ // Update this with the actual awards; most recent year is index 0
+
+// Update this with the actual awards; most recent year is index 0
+// Awards cannot currently be added for the active volume; you would have to wait for the subsequent volume to takeover the site
+export const awards = [
     [
         "National Council of Teachers of English (PRESLM)- 1st Class",
         "Columbia Scholastic Press Association (CSPA) – Gold with All-Columbian Honors awarded for Verbal and Visual Sections",
@@ -78,15 +81,14 @@ export const awardCategories = {
     levels: [
         ["Best", "Highest Award", "First Class", "Gold", "Superior", "1st Place", "First Place", "1st Class", "Distinction", "Design of the Year"],
         ["Silver", "Second Class", "2nd Class", "2nd Place", "Second Place"],
-        ["Bronze", "Mark of Distinction", "Honorable Mention", "Third Class", "3rd Class", "3rd Place", "Third Place", " "] // Don't remove that space; it holds a purpose.
+        ["Bronze", "Mark of Distinction", "Honorable Mention", "Third Class", "3rd Class", "3rd Place", "Third Place", ""] // Don't remove that blank quote; it holds a purpose (it does something in a lazy way that works).
     ]
 };
 
 // If you have a page for a volume of Briars and Ivy, you can add it to the list here
 // Add the year, not the Roman numeral of the volume
 export let catalog = [
-    2026,
-    2025
+    2026
 ]
 
 export function updateAwards(i) {

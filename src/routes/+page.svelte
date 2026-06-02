@@ -91,9 +91,9 @@
             box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
             text-align: center;
             margin-top: 10px;
-            background-color:  rgb(149, 149, 20);
+            background-color: rgb(126, 126, 55);
+            border: rgb(200, 200, 163) 5px solid;
             color: white;
-            border: none;
         }
         button:active {
             background-color:  white;
