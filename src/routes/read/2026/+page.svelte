@@ -60,6 +60,24 @@
         ["Sidney Xu", "A freshman who loves art and listening to music."],
         ["Alissa Zhu", "A senior who enjoys painting and hanging out with her birds."]
     ]);
+
+    let videos = $state([
+        [
+            "You Call to Me",
+            "Grace Freeman",
+            "https://vimeo.com/1193242606/12a753ec17?share=copy&fl=sv&fe=ci"
+        ],
+        [
+            "Suspended World",
+            "Chloe Chu",
+            "https://vimeo.com/1193241096/d7d5b99c2a?share=copy&fl=sv&fe=ci"
+        ],
+        [
+            "The Test of the Titans",
+            "Zoe Amsterdam",
+            "https://vimeo.com/1194099285/3c038888ad?share=copy&fl=sv&fe=ci"
+        ]
+    ])
 </script>
 <svelte:head>
     <link rel="preload" as="image" href="{base}/images/2026/cover.png" />
@@ -144,6 +162,38 @@
         }
     }
 
+    #media {
+        background-color: rgb(99, 87, 19);
+        color: white;
+        padding: 20px;
+
+        #media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 10px;
+
+            div {
+                background-color: rgb(123, 110, 27);
+                padding: 10px;
+                button {
+                    margin-bottom: 10px;
+                    width: 100%;
+                    background-color: rgb(94, 94, 50);
+                    box-shadow: none;
+                }
+                button:hover {
+                    transform: scale(1.01)
+                }
+                button:active {
+                    transform: scale(1.03);
+                }
+            }
+            div:hover {
+                background-color: rgb(117, 107, 45);
+            }
+        }
+    }
+
     
 </style>
 <svelte:window bind:innerWidth={screenX} bind:scrollY={scrollY}></svelte:window>
@@ -155,19 +205,19 @@
     <div style="top: {300-(scrollY/10)}px; right:200px; position: fixed;">
         <h1>Briars and Ivy</h1>
         <p style:font-weight=700 style:font-size=20px>VOL. LXIV</p>
-        <p>Scroll Down to Read <span style:transform="translateY(5px)" class="material-symbols-outlined">arrow_circle_down</span></p>
+        <p>Scroll Down to Read <span style:transform="translateY(5px)" class="material-symbols-outlined" translate="no">arrow_circle_down</span></p>
     </div>
     {:else if screenX > 800}
     <div style="top: {300-(scrollY/10)}px; right:150px; position: fixed;">
         <h1>Briars and Ivy</h1>
         <p style:font-weight=700 style:font-size=20px>VOL. LXIV</p>
-        <p>Scroll Down to Read <span style:transform="translateY(5px)" class="material-symbols-outlined">arrow_circle_down</span></p>
+        <p>Scroll Down to Read <span style:transform="translateY(5px)" class="material-symbols-outlined" translate="no">arrow_circle_down</span></p>
     </div>
     {:else}
     <div style="top: {290-(scrollY/10)}px; position: fixed; transform: translate(-50%, 0%); left: 50%;">
         <h1>Briars and Ivy</h1>
         <p style:font-weight=700 style:font-size=20px>VOL. LXIV</p>
-        <p>Scroll Down to Read <span style:transform="translateY(5px)" class="material-symbols-outlined">arrow_circle_down</span></p>
+        <p>Scroll Down to Read <span style:transform="translateY(5px)" class="material-symbols-outlined" translate="no">arrow_circle_down</span></p>
     </div>
     {/if}
     {#if screenX >= 1000}
@@ -228,6 +278,16 @@
             <div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;border-radius:40px;" src="https://online.fliphtml5.com/l879/BriarsAndIvy2026-Full/" title="BriarsAndIvy2026-Full" seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>
         </div>
     </div>
+    <div id="media">
+        <h2>Audiovisual Media</h2>
+        <p>Access QR Code content from this volume on the site</p>
+        <div id="media-grid">
+        {#each videos as x}
+            <div><h4 style:font-family="Epilogue"><i>{x[0]}</i> - <span style:font-weight=600>{x[1]}</span></h4>
+            <button onclick={() => {window.location.href = x[2]}}><span class="material-symbols-outlined" translate="no">play_circle</span></button></div>
+        {/each}
+        </div>
+    </div>
     <div id="submission">
         <h2>Student Contributors</h2>
         <img src="{base}/images/2026/coolFace.png" alt="Self-Portrait" />
@@ -245,4 +305,4 @@
         <p style:font-family="Epilogue"><i>Introflection -</i> <span style:font-weight=600>Jordan Melnick</span></p>-->
     </div>
 </div>
-<button id="return" onclick={() => {window.location = base + "/"}}><span class="material-symbols-outlined">arrow_circle_left</span></button>
+<button id="return" onclick={() => {window.location.href = base + "/"}}><span translate="no" class="material-symbols-outlined">arrow_circle_left</span></button>
