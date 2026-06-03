@@ -113,16 +113,15 @@
         position: relative;
     }
     #body {
-        background-color: rgb(114, 75, 51);
+        background-color: rgb(49, 41, 35);
         margin: none;
         padding: 20px;
         color: white;
-        border-top-right-radius: 30px;
-        border-top-left-radius: 30px;
     }
 
     #studentStaff {
         color: white;
+        background-color: rgb(121, 94, 72);
         border: none;
         box-shadow: 0px 5px 20px 10px rgba(0, 0, 0, 0.205);
     }
@@ -163,7 +162,7 @@
     }
 
     #media {
-        background-color: rgb(105, 82, 66);
+        background-color: rgb(90, 65, 45);
         color: white;
         padding: 20px;
 
@@ -203,8 +202,8 @@
     }
 </style>
 <svelte:window bind:innerWidth={screenX} bind:scrollY={scrollY}></svelte:window>
-<img id="cover" style="top: {-scrollY/20}px;" src="{base}/images/2025/background.png" alt="Black background with paint streaks" />
-<img id="face" style="top: {300-(scrollY*1.05)}px;" src="{base}/images/2025/coolFace.png" alt="Face" />
+<img id="cover" style="top: {-scrollY/20}px;" src="{base}/images/2025/background.png" alt="Black and brown background with paint streaks" />
+<img id="face" style="top: {310-(scrollY*1.05)}px;" src="{base}/images/2025/coolFace.png" alt="Abstract work of art depicting a face" />
 <div id="background"></div>
 <div id="coverText">
     <p style="top: {10-(scrollY/20)}px; left: 15px; position: fixed; font-family: Epilogue, Montserrat; margin-right: 150px; text-align: left;"><i>Girl Behind a Mask - </i> <span style:font-weight=600>Maya Chrzanowski, Jade Fuller, and Lucy Sternfeld</span></p>
@@ -217,9 +216,9 @@
 </div>
 <div style:height=550px></div>
 <div id="content">
-    <div style:height=60px></div>
+    <img src="{base}/images/2025/waveLanding.png" class="wave" alt="Decorational graphic" />
     <div id="body">
-            <div id="studentStaff" style="background-color: rgba(200, 160, 80, 0.85); width: 90%; justify-self: center; padding: 20px; border-radius: 30px; text-shadow: 0px 0px 10px black; font-weight: 600; margin-bottom: 50px;">
+            <div id="studentStaff" style="width: 90%; justify-self: center; padding: 20px; border-radius: 30px; text-shadow: 0px 0px 10px black; font-weight: 600; margin-bottom: 50px;">
                 <h2>Student Staff</h2>
                 <p>Editor-in-Chief: Abigail Chung</p>
                 <p>Art Director: Serena Xu</p>
