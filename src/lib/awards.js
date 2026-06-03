@@ -16,10 +16,10 @@ export const awards = [
         "Empire State Scholastic Press Association (ESSPA)-- Gold Award and Best Overall Literary Arts Magazine"
     ],
     [
-        "Columbia Scholastic Press Association (CSPA)-- Silver Crown Award",
-        "Empire State Scholastic Press Association (ESSPA)-- Silver Award",
         "National Scholastic Press Association (NSPA)-- 1st Class w/ Three Marks of Distinction",
-        "American Scholastic Press Association (ASPA)-- 1st Place w/ Special Merit"
+        "American Scholastic Press Association (ASPA)-- 1st Place w/ Special Merit",
+        "Columbia Scholastic Press Association (CSPA)-- Silver Crown Award",
+        "Empire State Scholastic Press Association (ESSPA)-- Silver Award"
     ],
     [
         "National Scholastic Press Association (NSPA)— All-American w/ Four Marks of Distinction",
@@ -88,7 +88,8 @@ export const awardCategories = {
 // If you have a page for a volume of Briars and Ivy, you can add it to the list here
 // Add the year, not the Roman numeral of the volume
 export let catalog = [
-    2026
+    2026,
+    2025
 ]
 
 export function updateAwards(i) {

@@ -119,9 +119,8 @@
             display: grid;
             /* Create two columns: one for the image (auto-sized) and one for text */
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 1.5rem;
+            grid-gap: 1.5rem;
             align-items: center; /* Vertically centers text with the image */
-            max-width: 90%;
         }
 
         button {
