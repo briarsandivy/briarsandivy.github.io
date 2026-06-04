@@ -124,7 +124,8 @@
         background-color: rgb(121, 94, 72);
         border: none;
         box-shadow: 0px 5px 20px 10px rgba(0, 0, 0, 0.205);
-        justify-self: center;
+        display: block;
+        margin: 0 auto;
     }
 
     #submission {
